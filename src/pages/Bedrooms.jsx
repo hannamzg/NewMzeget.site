@@ -301,38 +301,39 @@ const Bedrooms = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="card p-6 text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">👑</span>
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">חדר שינה ראשי</h3>
-              <p className="text-neutral-600 text-sm">ארונות מובנים, מגירות נסתרות, עיצוב אלגנטי</p>
-            </div>
-            
-            <div className="card p-6 text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🧸</span>
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">חדר ילדים</h3>
-              <p className="text-neutral-600 text-sm">מיטות כפולות, ארונות צבעוניים, מדפים</p>
-            </div>
-            
-            <div className="card p-6 text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">👨‍💻</span>
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">חדר נוער</h3>
-              <p className="text-neutral-600 text-sm">שולחן עבודה, מדפים, ארונות אחסון</p>
-            </div>
-            
-            <div className="card p-6 text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link to="/bedrooms/modern" className="card p-6 text-center hover:shadow-lg transition-all duration-300 group">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl">🏠</span>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">חדר אורחים</h3>
-              <p className="text-neutral-600 text-sm">עיצוב קלאסי, ארונות מעוצבים, נוחות</p>
-            </div>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">מודרני</h3>
+              <p className="text-neutral-600 text-sm mb-4">עיצוב נקי ופונקציונלי עם קווים ישרים</p>
+              <div className="text-primary-600 font-medium text-sm group-hover:text-primary-700">
+                צפה בפרטים ←
+              </div>
+            </Link>
+            
+            <Link to="/bedrooms/classic" className="card p-6 text-center hover:shadow-lg transition-all duration-300 group">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl">👑</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">קלאסי</h3>
+              <p className="text-neutral-600 text-sm mb-4">עיצוב מסורתי, עץ כהה, אלגנטיות</p>
+              <div className="text-primary-600 font-medium text-sm group-hover:text-primary-700">
+                צפה בפרטים ←
+              </div>
+            </Link>
+            
+            <Link to="/bedrooms/minimalist" className="card p-6 text-center hover:shadow-lg transition-all duration-300 group">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl">✨</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">מינימליסטי</h3>
+              <p className="text-neutral-600 text-sm mb-4">פשטות, פונקציונליות, עיצוב נקי</p>
+              <div className="text-primary-600 font-medium text-sm group-hover:text-primary-700">
+                צפה בפרטים ←
+              </div>
+            </Link>
           </div>
         </div>
       </section>
