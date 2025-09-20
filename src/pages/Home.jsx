@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import ProjectCard from '../components/ProjectCard';
 import ContactForm from '../components/ContactForm';
@@ -107,11 +108,11 @@ const Home = () => {
                 ספריות וארונות עם חומרי גלם איכותיים, עיצוב מוקפד ומחירים תחרותיים.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+972525119685" className="btn-primary text-center">
-                  התקשר עכשיו - 052-5119685
+                <a href="tel:+972525119685" className="btn-primary text-center hover:scale-105 transition-transform duration-200">
+                  📞 התקשר עכשיו - 052-5119685
                 </a>
-                <a href="#contact" className="btn-outline text-center">
-                  קבל הצעת מחיר חינם
+                <a href="https://wa.me/972525119685?text=שלום אלי! אני מעוניין לקבל הצעת מחיר חינם עבור פרויקט נגרות. אשמח לשמוע ממך." className="btn-outline text-center hover:scale-105 transition-transform duration-200">
+                  💬 קבל הצעת מחיר חינם
                 </a>
               </div>
             </div>
@@ -146,19 +147,22 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <a
+              <Link
                 key={index}
-                href={service.link}
-                className="card p-8 text-center hover:shadow-medium transition-all duration-300 group"
+                to={service.link}
+                className="card p-8 text-center hover:shadow-medium transition-all duration-300 group cursor-pointer hover:scale-105 hover:-translate-y-1"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors duration-200">
                   {service.title}
                 </h3>
                 <p className="text-neutral-600 text-sm leading-relaxed">
                   {service.description}
                 </p>
-              </a>
+                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-primary-600 text-sm font-medium">לחץ לפרטים ←</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -249,12 +253,12 @@ const Home = () => {
                     href="https://www.facebook.com/elimzigit/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200"
+                    className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
-                    עקוב אחרינו בפייסבוק
+                    📘 עקוב אחרינו בפייסבוק
                   </a>
                 </div>
               </div>

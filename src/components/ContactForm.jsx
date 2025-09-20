@@ -33,49 +33,35 @@ const ContactForm = ({ isModal = false, onClose = null }) => {
     setIsSubmitting(true);
 
     try {
-      // Create a comprehensive email with all form data
-      const subject = encodeURIComponent(`בקשה להצעת מחיר - ${formData.projectType || 'פרויקט נגרות'}`);
-      const body = encodeURIComponent(`
-שלום אלי,
+      // Create a comprehensive WhatsApp message with all form data
+      const whatsappMessage = encodeURIComponent(`
+שלום אלי! 👋
 
-קיבלתי בקשה חדשה להצעת מחיר:
+אני מעוניין בהצעת מחיר עבור פרויקט נגרות:
 
-פרטי הלקוח:
-שם: ${formData.name}
-טלפון: ${formData.phone}
-אימייל: ${formData.email}
-סוג פרויקט: ${formData.projectType || 'לא צוין'}
+📋 פרטי הלקוח:
+• שם: ${formData.name}
+• טלפון: ${formData.phone}
+• אימייל: ${formData.email || 'לא צוין'}
+• סוג פרויקט: ${formData.projectType || 'לא צוין'}
 
-פרטי הפרויקט:
+📝 פרטי הפרויקט:
 ${formData.message}
 
-תאריך: ${new Date().toLocaleDateString('he-IL')}
-שעה: ${new Date().toLocaleTimeString('he-IL')}
+📅 תאריך: ${new Date().toLocaleDateString('he-IL')}
+🕐 שעה: ${new Date().toLocaleTimeString('he-IL')}
 
-בברכה,
+אשמח לקבל הצעת מחיר מפורטת.
+
+תודה רבה! 🙏
 ${formData.name}
       `);
 
-      // Create mailto link
-      const mailtoLink = `mailto:elimzghanna123@gmail.com?subject=${subject}&body=${body}`;
+      // Create WhatsApp link
+      const whatsappLink = `https://wa.me/972525119685?text=${whatsappMessage}`;
       
-      // Try to open email client
-      const emailWindow = window.open(mailtoLink, '_blank');
-      
-      // If email client doesn't open, show alternative contact methods
-      setTimeout(() => {
-        if (!emailWindow || emailWindow.closed) {
-          // Show WhatsApp and phone options
-          const whatsappMessage = encodeURIComponent(`שלום אלי, אני מעוניין בהצעת מחיר עבור ${formData.projectType || 'פרויקט נגרות'}. שם: ${formData.name}, טלפון: ${formData.phone}`);
-          const whatsappLink = `https://wa.me/972525119685?text=${whatsappMessage}`;
-          
-          // Show contact options
-          alert(`אם תוכנת המייל לא נפתחה, אנא צור קשר בדרכים הבאות:\n\n1. WhatsApp: https://wa.me/972525119685\n2. טלפון: 052-5119685\n3. אימייל: elimzghanna123@gmail.com`);
-          
-          // Open WhatsApp as backup
-          window.open(whatsappLink, '_blank');
-        }
-      }, 1000);
+      // Open WhatsApp with the form data
+      window.open(whatsappLink, '_blank');
       
       // Show success message
       setIsSubmitting(false);
@@ -103,7 +89,7 @@ ${formData.name}
       setIsSubmitting(false);
       
       // Show error message with alternative contact methods
-      alert('שגיאה בשליחת הטופס. אנא צור קשר ישירות:\n\nטלפון: 052-5119685\nWhatsApp: https://wa.me/972525119685\nאימייל: elimzghanna123@gmail.com');
+      alert('שגיאה בשליחת הטופס. אנא צור קשר ישירות:\n\nטלפון: 052-5119685\nWhatsApp: https://wa.me/972525119685');
     }
   };
 
@@ -198,7 +184,7 @@ ${formData.name}
           disabled={isSubmitting}
           className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isSubmitting ? 'שולח...' : 'שלח בקשה להצעת מחיר'}
+          {isSubmitting ? 'שולח ל-WhatsApp...' : 'שלח ל-WhatsApp'}
         </button>
         
         <div className="text-center">
@@ -255,8 +241,8 @@ ${formData.name}
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-neutral-900 mb-2">הבקשה נשלחה בהצלחה!</h3>
-                <p className="text-neutral-600 mb-4">נחזור אליך עם הצעת מחיר תוך 24 שעות</p>
+                <h3 className="text-xl font-semibold text-neutral-900 mb-2">הטופס נשלח ל-WhatsApp!</h3>
+                <p className="text-neutral-600 mb-4">הבקשה שלך נשלחה ל-WhatsApp. נחזור אליך עם הצעת מחיר תוך 24 שעות</p>
                 <div className="text-sm text-neutral-500">
                   <p>לשאלות דחופות:</p>
                   <p>טלפון: 052-5119685</p>
@@ -288,8 +274,8 @@ ${formData.name}
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-xl font-semibold text-neutral-900 mb-2">הבקשה נשלחה בהצלחה!</h3>
-          <p className="text-neutral-600 mb-4">נחזור אליך עם הצעת מחיר תוך 24 שעות</p>
+          <h3 className="text-xl font-semibold text-neutral-900 mb-2">הטופס נשלח ל-WhatsApp!</h3>
+          <p className="text-neutral-600 mb-4">הבקשה שלך נשלחה ל-WhatsApp. נחזור אליך עם הצעת מחיר תוך 24 שעות</p>
           <div className="text-sm text-neutral-500">
             <p>לשאלות דחופות:</p>
             <p>טלפון: 052-5119685</p>

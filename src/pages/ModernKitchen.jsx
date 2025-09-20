@@ -106,8 +106,8 @@ const ModernKitchen = () => {
               מיקום הנגרייה: אבו סנאן 166
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+972525119685" className="btn-primary">
-                התקשר לייעוץ - 052-5119685
+              <a href="https://wa.me/972525119685?text=שלום אלי! אני מעוניין בייעוץ עבור מטבח מודרני. אשמח לקבל הצעת מחיר." className="btn-primary">
+                שלח לייעוץ ב-WhatsApp
               </a>
               <a href="#projects" className="btn-outline">
                 צפה בפרויקטים
