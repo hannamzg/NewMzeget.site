@@ -11,8 +11,12 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 space-x-reverse mb-6">
-                <div className="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">א</span>
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/images/logo.png" 
+                    alt="אלי מזיגית - לוגו" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">אלי מזיגית</h3>

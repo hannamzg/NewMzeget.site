@@ -221,7 +221,8 @@ const Storage = () => {
                           <img 
                             src={photo} 
                             alt={`פתרון אחסון ${index + 1}`}
-                            className="w-full h-[550px] md:h-[650px] object-cover transition-all duration-500 group-hover:scale-105"
+                            className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] object-cover transition-all duration-500 group-hover:scale-105"
+                            loading="lazy"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                           
@@ -253,19 +254,19 @@ const Storage = () => {
               
               {/* Modern Navigation Buttons */}
               <button
-                onClick={nextSlide}
+                onClick={prevSlide}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 z-20 group"
               >
                 <svg className="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
               <button
-                onClick={prevSlide}
+                onClick={nextSlide}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 z-20 group"
               >
                 <svg className="w-6 h-6 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               
