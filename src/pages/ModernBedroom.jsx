@@ -371,3 +371,4 @@ const ModernBedroom = () => {
 };
 
 export default ModernBedroom;
+

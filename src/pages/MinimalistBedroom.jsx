@@ -357,3 +357,4 @@ const MinimalistBedroom = () => {
 };
 
 export default MinimalistBedroom;
+

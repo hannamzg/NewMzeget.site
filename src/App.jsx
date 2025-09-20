@@ -15,6 +15,9 @@ import ModernBedroom from './pages/ModernBedroom';
 import ClassicBedroom from './pages/ClassicBedroom';
 import MinimalistBedroom from './pages/MinimalistBedroom';
 import Storage from './pages/Storage';
+import ModernLibrary from './pages/ModernLibrary';
+import ClassicLibrary from './pages/ClassicLibrary';
+import TraditionalLibrary from './pages/TraditionalLibrary';
 import Project from './pages/Project';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
@@ -36,6 +39,9 @@ function App() {
               <Route path="/bedrooms/classic" element={<ClassicBedroom />} />
               <Route path="/bedrooms/minimalist" element={<MinimalistBedroom />} />
               <Route path="/storage" element={<Storage />} />
+              <Route path="/storage/modern-library" element={<ModernLibrary />} />
+              <Route path="/storage/classic-library" element={<ClassicLibrary />} />
+              <Route path="/storage/traditional-library" element={<TraditionalLibrary />} />
               <Route path="/project/:id" element={<Project />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<FAQ />} />

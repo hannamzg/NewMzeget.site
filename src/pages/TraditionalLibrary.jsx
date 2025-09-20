@@ -3,24 +3,23 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import ProjectCard from '../components/ProjectCard';
 
-const ClassicBedroom = () => {
+const TraditionalLibrary = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
 
-  // Classic bedroom photos
-  const classicBedroomPhotos = [
-    '/photos/beedrooms/493071296_3993153510922929_4881324682366187318_n.jpg',
-    '/photos/beedrooms/493279435_3992376671000613_3641866465839409284_n.jpg',
-    '/photos/beedrooms/493538194_3993153494256264_8531605647312620830_n.jpg'
+  // Traditional library photos
+  const traditionalLibraryPhotos = [
+    '/photos/else/6f566845-accc-4a1b-94d2-bf5e5a145da2.jpg',
+    '/photos/else/70611119_2390895297815433_8301619308639813632_n.jpg'
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % classicBedroomPhotos.length);
+    setCurrentSlide((prev) => (prev + 1) % traditionalLibraryPhotos.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + classicBedroomPhotos.length) % classicBedroomPhotos.length);
+    setCurrentSlide((prev) => (prev - 1 + traditionalLibraryPhotos.length) % traditionalLibraryPhotos.length);
   };
 
   const openModal = (image) => {
@@ -33,44 +32,31 @@ const ClassicBedroom = () => {
     setModalImage('');
   };
 
-  const classicBedroomProjects = [
+  const traditionalLibraryProjects = [
     {
       id: 1,
-      title: "חדר שינה קלאסי עם עץ כהה",
-      description: "חדר שינה קלאסי עם עץ אגוז כהה, מיטה מעוצבת וארון קלאסי. עיצוב מסורתי ואלגנטי.",
-      image: '/photos/beedrooms/493071296_3993153510922929_4881324682366187318_n.jpg',
-      category: "חדרי שינה",
-      style: "קלאסי",
-      materials: "עץ אגוז טבעי",
-      dimensions: "4x3 מטר",
-      price: "55,000 ₪",
-      features: ["עץ אגוז כהה", "מיטה מעוצבת", "ארון קלאסי", "עיצוב מסורתי"],
+      title: "ספרייה מסורתית עם עץ גלוי",
+      description: "ספרייה מסורתית עם עץ גלוי, מדפים מעוצבים ועיצוב כפרי. מתאימה לסלון או חדר עבודה.",
+      image: '/photos/else/6f566845-accc-4a1b-94d2-bf5e5a145da2.jpg',
+      category: "ספריות",
+      style: "מסורתי",
+      materials: "עץ אלון טבעי",
+      dimensions: "3x2.5 מטר",
+      price: "30,000 ₪",
+      features: ["עץ גלוי", "מדפים מעוצבים", "עיצוב כפרי", "פרטים מסורתיים"],
       location: "אבו סנאן 166"
     },
     {
       id: 2,
-      title: "חדר שינה קלאסי עם שידות",
-      description: "חדר שינה קלאסי עם שידות מעוצבות, ארון עץ וארון קלאסי. עיצוב מסורתי ואלגנטי.",
-      image: '/photos/beedrooms/493279435_3992376671000613_3641866465839409284_n.jpg',
-      category: "חדרי שינה",
-      style: "קלאסי",
-      materials: "עץ אגוז טבעי",
-      dimensions: "4.5x3.5 מטר",
-      price: "62,000 ₪",
-      features: ["שידות מעוצבות", "ארון עץ", "עץ אגוז", "עיצוב קלאסי"],
-      location: "אבו סנאן 166"
-    },
-    {
-      id: 3,
-      title: "חדר שינה קלאסי מלא",
-      description: "חדר שינה קלאסי מלא עם כל הרהיטים - מיטה, ארון, שידות וקומפלט שינה. עיצוב מסורתי ואלגנטי.",
-      image: '/photos/beedrooms/493538194_3993153494256264_8531605647312620830_n.jpg',
-      category: "חדרי שינה",
-      style: "קלאסי",
-      materials: "עץ אגוז טבעי",
-      dimensions: "5x4 מטר",
-      price: "75,000 ₪",
-      features: ["מיטה מעוצבת", "ארון עץ", "שידות", "קומפלט שינה"],
+      title: "ספרייה מסורתית מלאה",
+      description: "ספרייה מסורתית מלאה עם עץ גלוי, מדפים מעוצבים ודלתות עץ. עיצוב מסורתי וכפרי.",
+      image: '/photos/else/70611119_2390895297815433_8301619308639813632_n.jpg',
+      category: "ספריות",
+      style: "מסורתי",
+      materials: "עץ אלון טבעי",
+      dimensions: "4x2.5 מטר",
+      price: "40,000 ₪",
+      features: ["עץ גלוי", "מדפים מעוצבים", "דלתות עץ", "עיצוב מסורתי"],
       location: "אבו סנאן 166"
     }
   ];
@@ -78,13 +64,13 @@ const ClassicBedroom = () => {
   return (
     <>
       <SEO 
-        title="חדרי שינה קלאסיים - אלי מזיגית נגרות"
-        description="חדרי שינה קלאסיים עם עיצוב מסורתי ואלגנטי. עץ אגוז כהה, מיטות מעוצבות וארונות קלאסיים."
-        url="https://elimazigit.com/bedrooms/classic"
+        title="ספריות מסורתיות - אלי מזיגית נגרות"
+        description="ספריות מסורתיות עם עיצוב כפרי ומסורתי. עץ גלוי, מדפים מעוצבים ופרטים מסורתיים."
+        url="https://elimazigit.com/storage/traditional-library"
       />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-50 to-yellow-50 section-padding">
+      <section className="bg-gradient-to-br from-amber-50 to-orange-50 section-padding">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto mb-12">
             <div className="flex justify-center mb-6">
@@ -92,15 +78,15 @@ const ClassicBedroom = () => {
             </div>
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center">
-                <span className="text-4xl">👑</span>
+                <span className="text-4xl">🌾</span>
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-              חדרי שינה קלאסיים
+              ספריות מסורתיות
             </h1>
             <p className="text-xl text-neutral-600 mb-4 leading-relaxed">
-              חדרי שינה קלאסיים עם עיצוב מסורתי ואלגנטי. 
-              עץ אגוז כהה, מיטות מעוצבות וארונות קלאסיים עם חומרי גלם איכותיים.
+              ספריות מסורתיות עם עיצוב כפרי ומסורתי. 
+              עץ גלוי, מדפים מעוצבים ופרטים מסורתיים עם חומרי גלם איכותיים.
             </p>
             <p className="text-lg text-amber-600 font-semibold mb-8">
               מיקום הנגרייה: אבו סנאן 166
@@ -120,13 +106,13 @@ const ClassicBedroom = () => {
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-white to-amber-50 p-4">
                 <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(${currentSlide * 100}%)` }}>
-                  {classicBedroomPhotos.map((photo, index) => (
+                  {traditionalLibraryPhotos.map((photo, index) => (
                     <div key={index} className="w-full flex-shrink-0">
                       <div className="relative group cursor-pointer" onClick={() => openModal(photo)}>
                         <div className="relative overflow-hidden rounded-2xl">
                           <img 
                             src={photo} 
-                            alt={`חדר שינה קלאסי ${index + 1}`}
+                            alt={`ספרייה מסורתית ${index + 1}`}
                             className="w-full h-[550px] md:h-[650px] object-cover transition-all duration-500 group-hover:scale-105"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -134,12 +120,12 @@ const ClassicBedroom = () => {
                           <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                             <div className="flex items-center justify-between">
                               <div>
-                                <h3 className="text-xl font-bold mb-1">חדר שינה קלאסי #{index + 1}</h3>
+                                <h3 className="text-xl font-bold mb-1">ספרייה מסורתית #{index + 1}</h3>
                                 <p className="text-sm opacity-90">לחץ להגדלה</p>
                               </div>
                               <div className="flex items-center space-x-2 space-x-reverse">
                                 <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
-                                  {index + 1} / {classicBedroomPhotos.length}
+                                  {index + 1} / {traditionalLibraryPhotos.length}
                                 </span>
                                 <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -182,10 +168,10 @@ const ClassicBedroom = () => {
                     <div className="w-16 h-1 bg-white/30 rounded-full overflow-hidden">
                       <div 
                         className="h-full bg-white rounded-full transition-all duration-300"
-                        style={{ width: `${((currentSlide + 1) / classicBedroomPhotos.length) * 100}%` }}
+                        style={{ width: `${((currentSlide + 1) / traditionalLibraryPhotos.length) * 100}%` }}
                       />
                     </div>
-                    <span className="text-white text-sm font-medium">{classicBedroomPhotos.length}</span>
+                    <span className="text-white text-sm font-medium">{traditionalLibraryPhotos.length}</span>
                   </div>
                 </div>
               </div>
@@ -194,7 +180,7 @@ const ClassicBedroom = () => {
             {/* Thumbnail Strip */}
             <div className="mt-8">
               <div className="flex justify-center space-x-3 overflow-x-auto pb-4 scrollbar-hide">
-                {classicBedroomPhotos.map((photo, index) => (
+                {traditionalLibraryPhotos.map((photo, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
@@ -222,15 +208,15 @@ const ClassicBedroom = () => {
         </div>
       </section>
 
-      {/* Classic Bedroom Features */}
+      {/* Traditional Library Features */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-              מאפיינים של חדר שינה קלאסי
+              מאפיינים של ספרייה מסורתית
             </h2>
             <p className="text-xl text-neutral-600">
-              מה שהופך חדר שינה לקלאסי ואלגנטי
+              מה שהופך ספרייה למסורתית וכפרית
             </p>
           </div>
           
@@ -241,8 +227,8 @@ const ClassicBedroom = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">עץ כהה</h3>
-              <p className="text-neutral-600">עץ אגוז כהה או עץ כהה אחר למראה אלגנטי ומסורתי</p>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">עץ גלוי</h3>
+              <p className="text-neutral-600">עץ אלון גלוי עם טקסטורה טבעית וצבעים חמים</p>
             </div>
             
             <div className="card p-6 text-center">
@@ -251,18 +237,18 @@ const ClassicBedroom = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">פרטים מעוצבים</h3>
-              <p className="text-neutral-600">פרטים מעוצבים עם עיטורים קלאסיים ואלגנטיים</p>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">פרטים מסורתיים</h3>
+              <p className="text-neutral-600">פרטים מעוצבים עם עיטורים מסורתיים וכפריים</p>
             </div>
             
             <div className="card p-6 text-center">
               <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">ארונות קלאסיים</h3>
-              <p className="text-neutral-600">ארונות קלאסיים עם עיצוב מסורתי ואלגנטי</p>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">מדפים מעוצבים</h3>
+              <p className="text-neutral-600">מדפים מעוצבים עם עיצוב מסורתי וכפרי</p>
             </div>
             
             <div className="card p-6 text-center">
@@ -271,8 +257,8 @@ const ClassicBedroom = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">עיצוב מסורתי</h3>
-              <p className="text-neutral-600">עיצוב מסורתי עם פרטים קלאסיים ואלגנטיים</p>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">עיצוב כפרי</h3>
+              <p className="text-neutral-600">עיצוב כפרי עם פרטים מסורתיים וחמימים</p>
             </div>
             
             <div className="card p-6 text-center">
@@ -281,8 +267,8 @@ const ClassicBedroom = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">אלגנטיות</h3>
-              <p className="text-neutral-600">מראה אלגנטי ומעודן המתאים לבית מסורתי</p>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">חמימות</h3>
+              <p className="text-neutral-600">מראה חם ומזמין המתאים לבית כפרי</p>
             </div>
             
             <div className="card p-6 text-center">
@@ -303,15 +289,15 @@ const ClassicBedroom = () => {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-              פרויקטי חדרי שינה קלאסיים
+              פרויקטי ספריות מסורתיות
             </h2>
             <p className="text-xl text-neutral-600">
-              {classicBedroomProjects.length} פרויקטים מעוצבים
+              {traditionalLibraryProjects.length} פרויקטים מעוצבים
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {classicBedroomProjects.map((project) => (
+            {traditionalLibraryProjects.map((project) => (
               <ProjectCard key={project.id} project={project} showPrice={true} />
             ))}
           </div>
@@ -323,10 +309,10 @@ const ClassicBedroom = () => {
         <div className="container-custom">
           <div className="text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              מוכן לתכנן את חדר השינה הקלאסי שלך?
+              מוכן לתכנן את הספרייה המסורתית שלך?
             </h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              קבל הצעת מחיר חינם ותתחיל ליצור את חדר השינה הקלאסי המושלם עבורך
+              קבל הצעת מחיר חינם ותתחיל ליצור את הספרייה המסורתית המושלמת עבורך
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+972525119685" className="bg-white text-amber-600 hover:bg-neutral-100 font-medium px-8 py-3 rounded-lg transition-colors duration-200">
@@ -358,7 +344,7 @@ const ClassicBedroom = () => {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src={modalImage}
-                alt="חדר שינה קלאסי"
+                alt="ספרייה מסורתית"
                 className="max-w-full max-h-[90vh] object-contain transition-transform duration-300 group-hover:scale-105"
                 onClick={(e) => e.stopPropagation()}
               />
@@ -370,5 +356,5 @@ const ClassicBedroom = () => {
   );
 };
 
-export default ClassicBedroom;
+export default TraditionalLibrary;
 

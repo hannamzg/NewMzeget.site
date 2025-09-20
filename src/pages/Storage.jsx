@@ -330,29 +330,38 @@ const Storage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="card p-6 text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Link to="/storage/modern-library" className="card p-6 text-center hover:shadow-lg transition-all duration-300 group">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl">📚</span>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">ספריות</h3>
-              <p className="text-neutral-600 text-sm">מדפים פתוחים וסגורים, עיצוב מותאם</p>
-            </div>
-            
-            <div className="card p-6 text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">👔</span>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">ספריות מודרניות</h3>
+              <p className="text-neutral-600 text-sm mb-4">מדפים מעוצבים, תאורה מובנית, עיצוב נקי</p>
+              <div className="text-primary-600 font-medium text-sm group-hover:text-primary-700">
+                צפה בפרטים ←
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">ארונות</h3>
-              <p className="text-neutral-600 text-sm">ארונות קיר, מגירות ומדפים</p>
-            </div>
+            </Link>
             
-            <div className="card p-6 text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚪</span>
+            <Link to="/storage/classic-library" className="card p-6 text-center hover:shadow-lg transition-all duration-300 group">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl">👑</span>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900 mb-2">חדרי ארונות</h3>
-              <p className="text-neutral-600 text-sm">חדרי ארונות מלאים עם פתרונות אחסון</p>
-            </div>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">ספריות קלאסיות</h3>
+              <p className="text-neutral-600 text-sm mb-4">עץ כהה, פרטים מעוצבים, עיצוב מסורתי</p>
+              <div className="text-primary-600 font-medium text-sm group-hover:text-primary-700">
+                צפה בפרטים ←
+              </div>
+            </Link>
+            
+            <Link to="/storage/traditional-library" className="card p-6 text-center hover:shadow-lg transition-all duration-300 group">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl">🌾</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">ספריות מסורתיות</h3>
+              <p className="text-neutral-600 text-sm mb-4">עץ גלוי, עיצוב כפרי, פרטים מסורתיים</p>
+              <div className="text-primary-600 font-medium text-sm group-hover:text-primary-700">
+                צפה בפרטים ←
+              </div>
+            </Link>
             
             <div className="card p-6 text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
